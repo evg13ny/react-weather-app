@@ -1,5 +1,5 @@
-const rapidApiKey = '5621750e05msh7bd3f106b43c646p11e8ecjsn7b885dd0947c'
-export const WEATHER_API_KEY = '020d156006ceb4ebeec5090abd738b57'
+const rapidApiKey = 'put your GeoDB key here'
+export const WEATHER_API_KEY = 'put your OpenWeatherMap key here'
 
 export const geoApiOptions = {
     method: 'GET',
@@ -10,5 +10,4 @@ export const geoApiOptions = {
 };
 
 export const GEO_API_URL = 'https://wft-geo-db.p.rapidapi.com/v1/geo'
-
 export const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5'
