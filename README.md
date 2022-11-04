@@ -2,9 +2,9 @@ Weather App made with React.
 
 You can see current weather with details and forecast next week (with details too).
 
-After you input a city, app get coordinates from GeoDB API and then get forecast from OpenWeatherMap API.
+After you input a city, app get coordinates from [GeoDB API](https://rapidapi.com/wirefreethought/api/geodb-cities) and then get forecast from [OpenWeatherMap API](https://openweathermap.org).
 
-! You need to get both of this keys and put then on api.jsx (it's free) !
+! You need to get both of this keys and put them on api.jsx (it's free) !
 
 For start:
 * git clone [repository url]
