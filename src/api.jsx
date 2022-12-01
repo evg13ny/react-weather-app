@@ -1,5 +1,5 @@
-const rapidApiKey = 'put your GeoDB key here'
-export const WEATHER_API_KEY = 'put your OpenWeatherMap key here'
+const rapidApiKey = '5621750e05msh7bd3f106b43c646p11e8ecjsn7b885dd0947c'
+export const WEATHER_API_KEY = '020d156006ceb4ebeec5090abd738b57'
 
 export const geoApiOptions = {
     method: 'GET',
