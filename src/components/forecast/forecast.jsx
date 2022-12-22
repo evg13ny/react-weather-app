@@ -10,27 +10,27 @@ import './forecast.css'
 const WEEK_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 const Forecast = ({data}) => {
-    const dayInAWeek = new Date().getDate()
-    const new_week = WEEK_DAYS.slice(dayInAWeek + 1, WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, dayInAWeek + 1))
+    const dayInAWeek = new Date().getDay()
+    const new_week = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, dayInAWeek))
 
     return (
         <div>
             <label className={'title'}>Daily</label>
             <Accordion allowZeroExpanded>
-                {data.list.slice(1, 8).map((item, index) => (
-                    <AccordionItem key={item}>
+                {data.list.splice(0, 7).map((item, index) => (
+                    <AccordionItem key={index}>
                         <AccordionItemHeading>
                             <AccordionItemButton>
                                 <div className={'daily-item'}>
                                     <img
-                                        className={'weather-icon'} alt={'weather'}
+                                        className={'weather-small'} alt='weather'
                                         src={`icons/${item.weather[0].icon}.png`}
                                     />
 
                                     <label className={'day'}>{new_week[index]}</label>
                                     <label className={'description'}>{item.weather[0].description}</label>
-                                    <label className={'min-max'}>{Math.round(item.main.temp_min)}°C
-                                        / {Math.round(item.main.temp_max)}°C</label>
+                                    <label className={'min-max'}>{Math.round(item.main.temp_max)}°C
+                                        / {Math.round(item.main.temp_min)}°C</label>
                                 </div>
                             </AccordionItemButton>
                         </AccordionItemHeading>
@@ -42,7 +42,7 @@ const Forecast = ({data}) => {
                                 </div>
                                 <div className={'daily-details-grid-item'}>
                                     <label>Clouds</label>
-                                    <label>{item.clouds.all}%</label>
+                                    <label>{item.clouds.all} %</label>
                                 </div>
                                 <div className={'daily-details-grid-item'}>
                                     <label>Wind</label>
